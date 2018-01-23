@@ -4,30 +4,66 @@
 <head>
     <meta charset="utf-8" />
     <title>个人网站</title>
-    <style>
-        .top {
-            padding: 0px;
-            margin: 0;
-            float: left;
-            color: white;
-            background: #000;
-            width: 100%;
-        }
-    </style>
+<style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .Header {
+        height: 100px;
+        background: #000;
+        color:white;
+    }
+    .Header Left {
+        float: left;
+        width: 200px;
+        color: white;
+    }
+
+    .Header Right {
+        float: right;
+        width: 200px;
+        color: white;
+    }
+
+    .Header Center {
+        margin: 0 200px;
+        color: white;
+    }
+
+    .Left {
+        float: left;
+        width: 200px;
+    }
+
+    .Right {
+        float: right;
+        width: 200px;
+    }
+
+    .Center {
+        margin: 0 200px;
+    }
+
+    .Content {
+        min-width: 700px;
+        _width: expression((document.documentElement.clientWidth||document.body.clientWidth)>700?"700px":"");
+    }
+</style>
 </head>
-<body style="padding: 0;
-            margin: 0;">
-    <div class="top">
-        <div style="position:absolute;top:0px;left:0px;width:200px;">111</div>
-        <div style="position:relative; margin-left:200px;margin-right:200px;"><p>个人网站</p></div>
-        <div style="position:absolute;top:0px;right:0px; width:200px;"><img src="image/dq.png" width="50" height="50" /></div>
+<body>
+    <div class="Header">
+        <div class="Left">111</div>
+        <div class="Center"><p>个人网站</p></div>
+        <div class="Right">
+            <img src="image/dq.png" width="50" height="50" />
+        </div>
     </div>
-    <div class="main">
-
+    <div class="Content">
+        <div class="Right">右</div>
+        <div class="Left">左</div>
+        <div class="Center">中</div>
     </div>
-    <div class="bottom">
-
-    </div>
-
 </body>
 </html>
