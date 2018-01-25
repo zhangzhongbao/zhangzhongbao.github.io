@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.View.ExhibitionPage"
+             NavigationPage.HasBackButton="True" 
+             BackgroundColor="#0F51B1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="123123123123"/>
+            <Label Text="{Binding Text}" />
+            <Label Text="{Binding ID}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

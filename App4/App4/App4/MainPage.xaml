@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App4"
+             x:Class="App4.MainPage"
+             BackgroundColor="#0F51B1" >
+    <!--<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20, 40, 20, 20" />
+            <On Platform="Android, WinPhone, Windows" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>-->
+    <Grid BackgroundColor="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Orientation="Horizontal">
+            <Button Text="测试" Style="{DynamicResource buttonStyle}" Clicked="OnCall"/>
+            <Button Text="测试1" Style="{DynamicResource buttonStyle}" Command="{Binding OnTranslate}" />
+            <Button Text="跳转" Style="{DynamicResource buttonStyle}" Clicked="OnExhibition" />
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <ListView x:Name="ItemsListView"
+				ItemsSource="{Binding Data}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                Style="{DynamicResource QuickQueryListBoxStyle}"
+                CachingStrategy="RecycleElement"
+                  ItemTemplate="{DynamicResource QuickQueryListBoxItemStyle}"
+                 ItemSelected="ItemsListView_ItemSelected"
+                  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Text}"
+                       LineBreakMode="NoWrap"
+                       Style="{DynamicResource ListItemTextStyle}"
+                       FontSize="16"/>
+                                <Label Text="{Binding Description}"
+                       LineBreakMode="NoWrap"
+                       Style="{DynamicResource ListItemDetailTextStyle}"
+                       FontSize="13"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           
+            <!--<StackLayout>
+                <Label Text="Enter a Phoneword:" />
+                <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+                <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+                <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+            </StackLayout>-->
+
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

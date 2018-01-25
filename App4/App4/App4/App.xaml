@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BorderWidth" Value="3" />
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="Large" />
+            </Style>
+            <Style x:key="QuickQueryListBoxStyle" TargetType="{x:Type ListView}">
+                <Setter Property="BackgroundColor" Value="#053788" />
+            </Style>
+            <!--
+            <Style x:Key="QuickQueryListBoxItemStyle" TargetType="{x:Type ListBoxItem}">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>-->
+        </ResourceDictionary>
+		<!-- Application resource dictionary -->
+        
+	</Application.Resources>
+</Application>
