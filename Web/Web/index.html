@@ -47,25 +47,33 @@
         vertical-align: middle;
         display: inline-block;
     }
+        .Center a {
+            display: inline-block;
+            width:100%;
+            margin-top:10px;
+        }
 
     .Content {
         min-width: 700px;
-        _width: expression((document.documentElement.clientWidth||document.body.clientWidth)>700?"700px":"");
+        _width: expression((document.documentElement.clientWidth||document.body.clientWidth)>700? (document.documentElement.clientWidth||document.body.clientWidth)+"px":"");
     }
 </style>
 </head>
 <body>
     <div class="Header">
-        <div class="Left">111</div>
-        <div class="Center"><p style="">个人网站</p></div>
+        <div class="Left"></div>
+        <div class="Center"><p style="">张忠豹个人网站</p></div>
         <div class="Right">
-            <img src="image/dq.png" width="50" height="50" />
+            <!--<img src="image/dq.png" width="50" height="50" />-->
         </div>
     </div>
     <div class="Content">
-        <div class="Right">右</div>
-        <div class="Left">左</div>
-        <div class="Center">中</div>
+        <div class="Right"></div>
+        <div class="Left"></div>
+        <div class="Center">
+            <a href="http://www.luocong.com/dsaanotes/" >数据结构与算法分析 学习笔记</a>
+            <a href="http://www.luocong.com/dsaanotes/">数据结构与算法分析 学习笔记</a>
+        </div>
     </div>
 </body>
 </html>
