@@ -116,6 +116,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\AccessData.cs" />
     <Compile Include="Common\DbContext.cs" />
     <Compile Include="Common\SingletonProvider.cs" />
     <Compile Include="MainActivity.cs" />

@@ -36,5 +36,10 @@ namespace SQLiteCommon
             //}
             return new SQLiteConnection(dbPath);
         }
+
+        public string GetHttpClient(string url)
+        {
+            return AccessData.GetRouteData(url);
+        }
     }
 }

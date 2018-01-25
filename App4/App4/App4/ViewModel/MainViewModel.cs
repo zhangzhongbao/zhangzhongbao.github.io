@@ -51,6 +51,7 @@ namespace App4.ViewModel
             {
                 return new Command((o) =>
                 {
+                    
                     database.Insert(new DItem() { Id = 1, Text = "aa", Description = "aa" });
                     database.Insert(new DItem() { Id = 1, Text = "bb", Description = "bb" });
                     database.Insert(new DItem() { Id = 1, Text = "cc", Description = "cc" });

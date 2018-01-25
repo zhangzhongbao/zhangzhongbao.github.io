@@ -10,5 +10,6 @@ namespace SQLiteCommon
     {
         void Init();
         SQLite.SQLiteConnection DbSqliteConnection();
+        string GetHttpClient(string url);
     }
 }

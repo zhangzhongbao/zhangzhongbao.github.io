@@ -96,6 +96,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\AccessData.cs" />
     <Compile Include="Common\DbContext.cs" />
     <Compile Include="Common\SingletonProvider.cs" />
     <Compile Include="MainPage.xaml.cs">

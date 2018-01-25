@@ -25,6 +25,8 @@ namespace App4.View
                     ExhibitionModel model = this.BindingContext as ExhibitionModel;
                     model.ID = arg2.Id;
                     model.Text = arg2.Text;
+                    
+
                 }
             });
         }

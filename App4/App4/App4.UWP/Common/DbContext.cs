@@ -29,5 +29,10 @@ namespace SQLiteCommon
             DbFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path, DbFileName);
             return new SQLiteConnection(DbFilePath);
         }
+
+        public string GetHttpClient(string url)
+        {
+            return AccessData.GetRouteData(url);
+        }
     }
 }
