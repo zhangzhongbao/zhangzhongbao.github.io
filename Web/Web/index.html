@@ -4,68 +4,93 @@
 <head>
     <meta charset="utf-8" />
     <title>个人网站</title>
-<style type="text/css">
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
-    .Header {
-        height: 100px;
-        background: #000;
-        color:white;
-    }
-    .Header Left {
-        float: left;
-        width: 200px;
-        color: white;
-    }
-
-    .Header Right {
-        float: right;
-        width: 200px;
-        color: white;
-    }
-
-    .Header Center {
-        margin: 0 200px;
-        color: white;
-    }
-
-    .Left {
-        float: left;
-        width: 200px;
-    }
-
-    .Right {
-        float: right;
-        width: 400px;
-    }
-
-    .Center {
-        margin: 0 200px;
-        vertical-align: middle;
-        display: inline-block;
-    }
-        .Center a {
-            display: inline-block;
-            width:100%;
-            margin-top:10px;
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
         }
 
-    .Content {
-        min-width: 700px;
-        _width: expression((document.documentElement.clientWidth||document.body.clientWidth)>700? "700px":"");
-    }
-</style>
+        .Header {
+            height: 100px;
+            background: #000;
+            color: white;
+        }
+
+            .Header Left {
+                float: left;
+                width: 200px;
+                color: white;
+            }
+
+            .Header Right {
+                float: right;
+                width: 200px;
+                color: white;
+            }
+
+            .Header Center {
+                margin: 0 200px;
+                color: white;
+            }
+
+        .Left {
+            float: left;
+            width: 200px;
+        }
+
+        .Right {
+            float: right;
+            width: 400px;
+        }
+
+        .Center {
+            margin: 0 200px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+            .Center a {
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            .Center input {
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+        .Content {
+            min-width: 700px;
+            _width: expression((document.documentElement.clientWidth||document.body.clientWidth)>700? "700px":"");
+        }
+    </style>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            
+
             $('#aa').click(function () {
-                var data = "123123";
-                export_raw('range.json', data);
+                //var data = "123123";
+                //export_raw('range.json', data);
+                //txt为字符串  
+
+                var txt = '{"employees":[' +
+                    '{"firstName":"Bill","lastName":"Gates" },' +
+                    '{"firstName":"George","lastName":"Bush" },' +
+                    '{"firstName":"Thomas","lastName":"Carter" }]}';
+
+                var obj = eval("(" + txt + ")");// jQuery.parseJSON(txt);
+                //alert(txt);
+                $("#fname").text(txt);
+                //通过eval()方法  
+                //var obj = eval ("(" + txt + ")");   
+                //通过JSON解析  
+                //obj = jQuery.parseJSON(txt);  
+                //obj = JSON.parse(txt);
+
+                //document.getElementById("fname").innerHTML = txt;
             });
+
+
         });
 
         function fake_click(obj) {
@@ -75,7 +100,7 @@
                 , false, false, false, false, 0, null
             );
             obj.dispatchEvent(ev);
-            alert("aaa");
+
         }
 
         //name-文件名；data-要保存的字符串。
@@ -87,7 +112,9 @@
             save_link.download = name;
             fake_click(save_link);
         }
-       
+
+
+
     </script>
 </head>
 <body>
@@ -95,16 +122,23 @@
         <div class="Left"></div>
         <div class="Center"><p style="">张忠豹个人网站</p></div>
         <div class="Right">
-          <p> 排序 归并排序 快速排序 优先队列 二叉查找树 散列表</p> 
+            <p> 排序 归并排序 快速排序 优先队列 二叉查找树 散列表</p>
             <!--<img src="image/dq.png" width="50" height="50" />-->
         </div>
     </div>
     <div class="Content">
         <div class="Left"></div>
         <div class="Center">
-            <a href="http://www.luocong.com/dsaanotes/" >数据结构与算法分析 学习笔记</a>
-            <a href="http://www.163.com/">zhongbao201706@163.com</a>
-            <a href="#" id="aa">测试</a>
+            <p><a href="http://www.luocong.com/dsaanotes/">数据结构与算法分析 学习笔记</a></p>
+            <p><a href="http://www.163.com/">zhongbao201706@163.com</a></p>
+            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
+            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
+            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
+            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
+            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
+            <p><input id="name" style="width:300px;height:20px;" /></p>
+            <p><a href="#" id="aa">生成JSON</a></p>
+            <p><textarea id="fname" style="width:500px;height:400px;"></textarea></p>
         </div>
         <div class="Right">
             <p>https://github.com/zhangzhongbao/webcode.git</p>
