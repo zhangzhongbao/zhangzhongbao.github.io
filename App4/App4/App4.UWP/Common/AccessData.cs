@@ -17,7 +17,7 @@ namespace SQLiteCommon
             {
                 try
                 {
-                    var response =client.GetAsync(url).Result;
+                    var response =(client.GetAsync(url)).Result;
                     if (!response.IsSuccessStatusCode)
                     {
                         return "";

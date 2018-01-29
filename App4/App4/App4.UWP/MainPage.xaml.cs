@@ -24,8 +24,6 @@ namespace App4.UWP
             this.InitializeComponent();
             DbContext.Instance.Init();
             LoadApplication(new App4.App());
-            string url = "https://zhangzhongbao.github.io/Web/Web/index.html";
-            AccessData.GetRouteData(url); //接收到响应的json 字符串  
         }
     }
 }

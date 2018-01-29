@@ -1,9 +1,11 @@
-﻿using SQLiteCommon.Model;
+﻿using SQLiteCommon;
+using SQLiteCommon.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace App4.ViewModel
 {
@@ -11,9 +13,12 @@ namespace App4.ViewModel
     {
         public ExhibitionModel()
         {
+            Content= DependencyService.Get<SQLiteCommon.IDatabaseConnection>().GetHttpClient("https://zhangzhongbao.github.io/Web/Web/index.html");
+            
         }
         private int _ID;
         string _Text = string.Empty;
+        string _Content;
         public string Text
         {
             get { return _Text; }
@@ -21,5 +26,6 @@ namespace App4.ViewModel
         }
 
         public int ID { get => _ID; set => SetProperty(ref _ID, value); }
+        public string Content { get => _Content; set => SetProperty(ref _Content, value); }
     }
 }

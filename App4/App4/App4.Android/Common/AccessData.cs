@@ -25,24 +25,6 @@ namespace SQLiteCommon
             StreamReader streamReader = new StreamReader(stream, Encoding.UTF8);
             string retString = streamReader.ReadToEnd();
             return retString;
-            //using (HttpClient client = new HttpClient())
-            //{
-            //    try
-            //    {
-            //        var response =await client.GetAsync(url);
-            //        if (!response.IsSuccessStatusCode)
-            //        {
-            //            return "";
-            //        }
-            //       return await response.Content.ReadAsStringAsync();
-            //        //return Task.FromResult<string>(a); 
-            //    }
-            //    catch (HttpRequestException ex)
-            //    {
-            //        return "";
-            //        //throw new TrackSeriesApiException("", false, ex);
-            //    }
-            //}
         }
     }
 }

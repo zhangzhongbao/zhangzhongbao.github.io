@@ -6,9 +6,18 @@
              BackgroundColor="#0F51B1">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="123123123123"/>
-            <Label Text="{Binding Text}" />
-            <Label Text="{Binding ID}" />
+            <Label BackgroundColor="White"  Text="123123123123"/>
+            <Label BackgroundColor="White" Text="{Binding Text}" />
+            <Label BackgroundColor="White" Text="{Binding ID}" />
+            <!--<Label BackgroundColor="White"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   HeightRequest="200"
+                   Text="{Binding Content}"/>-->
+            <!--<WebView Source=""></WebView>-->
+            <Editor Text="{Binding Content}" HeightRequest="300" />
+            <!--<Entry Text="{Binding Content}"  />-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
