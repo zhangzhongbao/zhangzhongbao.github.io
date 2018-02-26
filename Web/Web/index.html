@@ -63,6 +63,9 @@
             min-width: 700px;
             _width: expression((document.documentElement.clientWidth||document.body.clientWidth)>700? "700px":"");
         }
+        li {
+            list-style: none;
+        }
     </style>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
@@ -79,8 +82,14 @@
                     '{"firstName":"Thomas","lastName":"Carter" }]}';
 
                 var obj = eval("(" + txt + ")");// jQuery.parseJSON(txt);
+                alert(JSON.stringify(obj.employees));
+                //alert(obj.employees[0].firstName);
+                $.each(obj.employees, function (infoIndex, info) {
+                    //$("#fname").append(JSON.stringify(info));
+                    $("#fname").append(info.firstName + ":" + info.lastName+"</br>");
+                })
                 //alert(txt);
-                $("#fname").text(txt);
+                //$("#fname").text(txt);
                 //通过eval()方法  
                 //var obj = eval ("(" + txt + ")");   
                 //通过JSON解析  
@@ -129,16 +138,29 @@
     <div class="Content">
         <div class="Left"></div>
         <div class="Center">
-            <p><a href="http://www.luocong.com/dsaanotes/">数据结构与算法分析 学习笔记</a></p>
-            <p><a href="http://www.163.com/">zhongbao201706@163.com</a></p>
-            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
-            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
-            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
-            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
-            <p><input id="name" style="width:300px;height:20px;float:left;" /></p>
-            <p><input id="name" style="width:300px;height:20px;" /></p>
-            <p><a href="#" id="aa">生成JSON</a></p>
-            <p><textarea id="fname" style="width:500px;height:400px;"></textarea></p>
+            <div>
+                <ul>
+                    <li><a href="http://www.luocong.com/dsaanotes/">数据结构与算法分析 学习笔记</a></li>
+                    <li><a href="http://www.163.com/">zhongbao201706@163.com</a></li>
+                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
+                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
+                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
+                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
+                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
+                    
+                </ul>
+            </div>
+           <div>
+               <table>
+                   <tr>
+                       <p><a href="#" id="aa">生成JSON</a></p>
+                   </tr>
+                   <tr></tr>
+               </table>
+              
+               <p><textarea id="fname" style="width:500px;height:400px;"></textarea></p>
+             
+           </div>
         </div>
         <div class="Right">
             <p>https://github.com/zhangzhongbao/webcode.git</p>
