@@ -16,53 +16,64 @@
             color: white;
         }
 
-            .Header Left {
-                float: left;
-                width: 200px;
-                color: white;
-            }
-
-            .Header Right {
-                float: right;
-                width: 200px;
-                color: white;
-            }
-
-            .Header Center {
-                margin: 0 200px;
-                color: white;
-            }
-
         .Left {
-            float: left;
+            position: absolute;
+            top: 0px;
+            left: 0px;
             width: 200px;
+            color: white;
         }
 
         .Right {
-            float: right;
-            width: 400px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 200px;
+            color: white;
         }
 
         .Center {
-            margin: 0 200px;
-            vertical-align: middle;
-            display: inline-block;
+            margin: 0 200px 0 200px;
+            color: white;
         }
-
-            .Center a {
-                display: inline-block;
-                margin-top: 10px;
-            }
-
-            .Center input {
-                display: inline-block;
-                margin-top: 10px;
-            }
 
         .Content {
-            min-width: 700px;
-            _width: expression((document.documentElement.clientWidth||document.body.clientWidth)>700? "700px":"");
+            /*min-width: 700px;
+            _width: expression((document.documentElement.clientWidth||document.body.clientWidth)>700? "700px":"");*/
         }
+
+        .cLeft {
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            width: 200px;
+            height: 100%;
+        }
+
+        .cRight {
+            position: absolute;
+            top: 100px;
+            right: 0px;
+            width: 500px;
+            height: 100%;
+        }
+
+        .cCenter {
+            margin: 0 500px 0 200px;
+            height: 100%;
+        }
+
+            .cCenter a {
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            .cCenter input {
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+
         li {
             list-style: none;
         }
@@ -132,41 +143,39 @@
         <div class="Center"><p style="">张忠豹个人网站</p></div>
         <div class="Right">
             <p> 排序 归并排序 快速排序 优先队列 二叉查找树 散列表</p>
-            <!--<img src="image/dq.png" width="50" height="50" />-->
         </div>
     </div>
     <div class="Content">
-        <div class="Left"></div>
-        <div class="Center">
+        <div class="cLeft"></div>
+        <div class="cCenter">
+                <div><a href="http://www.luocong.com/dsaanotes/">数据结构与算法分析 学习笔记</a></div>
+                <div><a href="http://www.163.com/">zhongbao201706@163.com</a></div>
+               
+
             <div>
-                <ul>
-                    <li><a href="http://www.luocong.com/dsaanotes/">数据结构与算法分析 学习笔记</a></li>
-                    <li><a href="http://www.163.com/">zhongbao201706@163.com</a></li>
-                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
-                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
-                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
-                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
-                    <li><input id="name" style="width:300px;height:20px;float:left;" /></li>
-                     
-                </ul>
+                <table>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr>
+                       <td><p><a href="#" id="aa">生成JSON</a></p></td>
+                    </tr>
+                    <tr></tr>
+                </table>
+
+                <p><textarea id="fname" style="width:500px;height:400px;"></textarea></p>
+
             </div>
-           <div>
-               <table>
-                   <tr>
-                       <p><a href="#" id="aa">生成JSON</a></p>
-                   </tr>
-                   <tr></tr>
-               </table>
-              
-               <p><textarea id="fname" style="width:500px;height:400px;"></textarea></p>
-             
-           </div>
         </div>
-        <div class="Right">
+        <div class="cRight">
             <p>https://github.com/zhangzhongbao/webcode.git</p>
             <p>Hadoop+Spark+MongoDB+MySQL+C#</p>
             <p>https://www.cnblogs.com/yujon/p/6128761.html</p>
-
+            <p>WPF实现阴影效果 https://www.tuicool.com/articles/ym6Jnm3</p>
+            <p>Redis并发锁 http://www.cnblogs.com/tdws/p/5712835.html</p>
+            <p> </p>
         </div>
     </div>
 </body>

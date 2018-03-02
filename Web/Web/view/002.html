@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>
+        public class RedisHelper
+        {
+        public RedisClient client = new RedisClient("127.0.0.1", 6379);
+        public void Set<T>
+            (string key, T val)
+            {
+            client.Set(key, val);
+            }
+            public T Get<T>
+                (string key)
+                {
+                var result = client.Get<T>
+                    (key);
+                    return result;
+                    }
+                    public IDisposable Acquire(string key)
+                    {
+                    return  client.AcquireLock(key);
+                    }
+                    }
+    </p>
+   
+</body>
+</html>
