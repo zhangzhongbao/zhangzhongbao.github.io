@@ -26,7 +26,7 @@ namespace SQLiteCommon
                 }
                 catch (HttpRequestException ex)
                 {
-                    return "";// Task.FromResult<string>("");
+                    return "";
                     //throw new TrackSeriesApiException("", false, ex);
                 }
             }
