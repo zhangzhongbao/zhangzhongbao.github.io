@@ -11,7 +11,7 @@ namespace SQLiteCommon
 {
     public class AccessData
     {
-        public static string GetRouteData(string url)
+        public  static string GetRouteData(string url)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -20,14 +20,14 @@ namespace SQLiteCommon
                     var response =(client.GetAsync(url)).Result;
                     if (!response.IsSuccessStatusCode)
                     {
-                        return "";
+                        return "";// Task.FromResult<string>("");
                     }
-                   return response.Content.ReadAsStringAsync().Result;
+                    return response.Content.ReadAsStringAsync().Result;// Task.FromResult<string>( response.Content.ReadAsStringAsync().Result);
                     //return Task.FromResult<string>(a); 
                 }
                 catch (HttpRequestException ex)
                 {
-                    return "";
+                    return "";// Task.FromResult<string>("");
                     //throw new TrackSeriesApiException("", false, ex);
                 }
             }

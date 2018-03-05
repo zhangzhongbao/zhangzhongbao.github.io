@@ -13,8 +13,10 @@ namespace App4.ViewModel
     {
         public ExhibitionModel()
         {
-            Content= DependencyService.Get<SQLiteCommon.IDatabaseConnection>().GetHttpClient("https://zhangzhongbao.github.io/Web/Web/json/Data.json");
-            
+            Task.Run(() =>
+            {
+                Content = DependencyService.Get<SQLiteCommon.IDatabaseConnection>().GetHttpClient("https://zhangzhongbao.github.io/Web/Web/json/Data.json");
+            });
         }
         private int _ID;
         string _Text = string.Empty;

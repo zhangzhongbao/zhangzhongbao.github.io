@@ -7,6 +7,7 @@ using SQLite;
 using Xamarin.Forms;
 using SQLiteCommon;
 using SQLiteCommon.Model;
+using System.Threading.Tasks;
 
 [assembly: Dependency(typeof(DbContext))]
 namespace SQLiteCommon
