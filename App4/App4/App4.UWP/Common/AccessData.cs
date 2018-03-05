@@ -26,8 +26,8 @@ namespace SQLiteCommon
                 }
                 catch (HttpRequestException ex)
                 {
-                    return ""; 
-                    //throw new TrackSeriesApiException("", false, ex);
+                    //return ""; 
+                    ////throw new TrackSeriesApiException("", false, ex);
                 }
             }
         }
