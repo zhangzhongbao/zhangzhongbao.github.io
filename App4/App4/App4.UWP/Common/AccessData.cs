@@ -23,7 +23,7 @@ namespace SQLiteCommon
                         return "";// Task.FromResult<string>("");
                     }
                     return response.Content.ReadAsStringAsync().Result;// Task.FromResult<string>( response.Content.ReadAsStringAsync().Result);
-                    //return Task.FromResult<string>(a); 
+                    
                 }
                 catch (HttpRequestException ex)
                 {
