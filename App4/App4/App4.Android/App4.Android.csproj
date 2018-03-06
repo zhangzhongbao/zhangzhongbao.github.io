@@ -124,16 +124,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedNativeLibrary Include="Assets\Jars\x86_64\libindoor.so" />
-    <EmbeddedNativeLibrary Include="Assets\Jars\x86_64\liblocSDK7b.so" />
-    <EmbeddedNativeLibrary Include="Assets\Jars\arm64-v8a\libindoor.so" />
-    <EmbeddedNativeLibrary Include="Assets\Jars\arm64-v8a\liblocSDK7b.so" />
-    <EmbeddedNativeLibrary Include="Assets\Jars\armeabi\libindoor.so" />
-    <EmbeddedNativeLibrary Include="Assets\Jars\armeabi\liblocSDK7b.so" />
-    <EmbeddedNativeLibrary Include="Assets\Jars\armeabi-v7a\libindoor.so" />
-    <EmbeddedNativeLibrary Include="Assets\Jars\armeabi-v7a\liblocSDK7b.so" />
-    <EmbeddedNativeLibrary Include="Assets\Jars\x86\libindoor.so" />
-    <EmbeddedNativeLibrary Include="Assets\Jars\x86\liblocSDK7b.so" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
@@ -157,9 +147,6 @@
       <Project>{ca1765eb-6983-4371-8f06-ecbf3711befb}</Project>
       <Name>App4</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedNativeLibrary Include="Assets\Jars\BaiduLBS_Android.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
