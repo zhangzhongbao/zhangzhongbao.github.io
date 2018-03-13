@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidSupportedAbis>
+    </AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -143,10 +144,47 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BaiduCommon\BaiduCommon.csproj">
+      <Project>{d6c7b8b2-878e-429c-9ce5-a9484199edb9}</Project>
+      <Name>BaiduCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\App4\App4.csproj">
       <Project>{ca1765eb-6983-4371-8f06-ecbf3711befb}</Project>
       <Name>App4</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\BaiduLBS_Android.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\arm64-v8a\libindoor.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\arm64-v8a\liblocSDK7b.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\armeabi\libindoor.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\armeabi\liblocSDK7b.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\armeabi-v7a\libindoor.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\armeabi-v7a\liblocSDK7b.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\x86\libindoor.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\x86\liblocSDK7b.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\x86_64\libindoor.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Jars\x86_64\liblocSDK7b.so" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

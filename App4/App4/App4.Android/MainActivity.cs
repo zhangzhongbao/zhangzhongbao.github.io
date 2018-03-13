@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using SQLiteCommon;
+using BaiduCommon;
 
 namespace App4.Droid
 {
@@ -19,7 +20,8 @@ namespace App4.Droid
             ToolbarResource = Resource.Layout.Toolbar;
             DbContext.Instance.Init();
             base.OnCreate(bundle);
-            
+            //SDKInitializer.
+            //SDKInitializer
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
