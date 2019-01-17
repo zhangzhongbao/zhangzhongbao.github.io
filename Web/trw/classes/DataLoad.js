@@ -9,33 +9,33 @@ startLoadingData = function(){
 }
 
 onLoadConfiguration = function(e){
-	//alert(e.result);
-	//configuration = JSON.parse(e.result);
-	var data={
-	"title":"Twitter Company",
-	"subtitle":"One week of conversations at Twitter Co. from 2/15/13 to 2/22/13 <fs11><br><br>sample demo of Newk vβ0.1, network visualization software being developed by <ehttp://moebio.com*Santiago Ortiz></f>",
-	"urlCsv":"resources/twitterCompanyData/twitterTeam3.csv",
-	"urlGml":"resources/twitterCompanyData/TwitterTeam.gml",
-	"urlTweets":"resources/twitterCompanyData/twitterTweets.txt",
-	"urlClusters":"resources/twitterCompanyData/clustersTwitter.txt",
-	"nLevels":2,
-	"curves":true,
-	"backGroundColor":"#000000",
-	"defaultNodesColor":"rgb(200,200,200)",
-	"defaultRelationsColor":"rgba(255,255,255,0.8)",
-	"loadThumbnails":true,
-	"zoomMode":1,
-	"initialFishEye":0,
-	"initialScale":1,
-	"minRelationWeightToDraw":999,
-	"circlesOnRelated":false,
-	"minNodesRadius":3,
-	"maxNodesRadius":42,
-	"shapeMode":0,
-	"relationWidthFactor":1,
-	"nodesWeightProperty":"inDegree"
-};
-configuration = data;
+	alert(e.result);
+	configuration = JSON.parse(e.result);
+//	var data={
+//	"title":"Twitter Company",
+//	"subtitle":"One week of conversations at Twitter Co. from 2/15/13 to 2/22/13 <fs11><br><br>sample demo of Newk vβ0.1, network visualization software being developed by <ehttp://moebio.com*Santiago Ortiz></f>",
+//	"urlCsv":"resources/twitterCompanyData/twitterTeam3.csv",
+//	"urlGml":"resources/twitterCompanyData/TwitterTeam.gml",
+//	"urlTweets":"resources/twitterCompanyData/twitterTweets.txt",
+//	"urlClusters":"resources/twitterCompanyData/clustersTwitter.txt",
+//	"nLevels":2,
+//	"curves":true,
+//	"backGroundColor":"#000000",
+//	"defaultNodesColor":"rgb(200,200,200)",
+//	"defaultRelationsColor":"rgba(255,255,255,0.8)",
+//	"loadThumbnails":true,
+//	"zoomMode":1,
+//	"initialFishEye":0,
+//	"initialScale":1,
+//	"minRelationWeightToDraw":999,
+//	"circlesOnRelated":false,
+//	"minNodesRadius":3,
+//	"maxNodesRadius":42,
+//	"shapeMode":0,
+//	"relationWidthFactor":1,
+//	"nodesWeightProperty":"inDegree"
+//};
+//configuration = data;
 	c.log('configuration', configuration);
 	
 	nTLoad = Number(configuration.urlCsv!='')+1;
