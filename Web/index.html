@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html style="padding: 0;
+            margin: 0;">
+<head>
+    <meta charset="utf-8" />
+    <title>个人网站</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Header {
+            height: 100px;
+            background: #000;
+            color: white;
+        }
+
+        .Left {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 200px;
+            color: white;
+        }
+
+        .Right {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 200px;
+            color: white;
+        }
+
+        .Center {
+            margin: 0 200px 0 200px;
+            color: white;
+        }
+
+        .Content {
+            /*min-width: 700px;
+            _width: expression((document.documentElement.clientWidth||document.body.clientWidth)>700? "700px":"");*/
+        }
+
+        .cLeft {
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            width: 200px;
+            height: 100%;
+        }
+
+        .cRight {
+            position: absolute;
+            top: 100px;
+            right: 0px;
+            width: 500px;
+            height: 100%;
+        }
+
+        .cCenter {
+            margin: 0 500px 0 200px;
+            height: 100%;
+        }
+
+            .cCenter a {
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            .cCenter input {
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+
+        li {
+            list-style: none;
+        }
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('#aa').click(function () {
+                //var data = "123123";
+                //export_raw('range.json', data);
+                //txt为字符串  
+
+                var txt = '{"employees":[' +
+                    '{"firstName":"Bill","lastName":"Gates" },' +
+                    '{"firstName":"George","lastName":"Bush" },' +
+                    '{"firstName":"Thomas","lastName":"Carter" }]}';
+
+                var obj = eval("(" + txt + ")");// jQuery.parseJSON(txt);
+                alert(JSON.stringify(obj.employees));
+                //alert(obj.employees[0].firstName);
+                $.each(obj.employees, function (infoIndex, info) {
+                    //$("#fname").append(JSON.stringify(info));
+                    $("#fname").append(info.firstName + ":" + info.lastName+"</br>");
+                })
+                //alert(txt);
+                //$("#fname").text(txt);
+                //通过eval()方法  
+                //var obj = eval ("(" + txt + ")");   
+                //通过JSON解析  
+                //obj = jQuery.parseJSON(txt);  
+                //obj = JSON.parse(txt);
+
+                //document.getElementById("fname").innerHTML = txt;
+            });
+
+
+        });
+
+        function fake_click(obj) {
+            var ev = document.createEvent("MouseEvents");
+            ev.initMouseEvent(
+                "click", true, false, window, 0, 0, 0, 0, 0
+                , false, false, false, false, 0, null
+            );
+            obj.dispatchEvent(ev);
+
+        }
+
+        //name-文件名；data-要保存的字符串。
+        function export_raw(name, data) {
+            var urlObject = window.URL || window.webkitURL || window;
+            var export_blob = new Blob([data]);
+            var save_link = document.createElementNS("http://www.w3.org/1999/xhtml", "a");
+            save_link.href = urlObject.createObjectURL(export_blob);
+            save_link.download = name;
+            fake_click(save_link);
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <div class="Header">
+        <div class="Left"></div>
+        <div class="Center"><p style="">张忠豹个人网站</p></div>
+        <div class="Right">
+            <p> 排序 归并排序 快速排序 优先队列 二叉查找树 散列表</p>
+        </div>
+    </div>
+    <div class="Content">
+        <div class="cLeft"></div>
+        <div class="cCenter">
+            <div><a href="http://www.luocong.com/dsaanotes/">数据结构与算法分析 学习笔记</a></div>
+            <div><a href="http://www.163.com/">zhongbao201706@163.com</a></div>
+            <div><a href="/view/001.html">mongodb配置主从模式</a></div>
+            <div><a href="/view/003.html">linux命令</a></div>
+            <div>
+                <table>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr><td><input id="name" style="width:300px;height:20px;float:left;" /></td></tr>
+                    <tr>
+                        <td><p><a href="#" id="aa">生成JSON</a></p></td>
+                    </tr>
+                    <tr></tr>
+                </table>
+
+                <p><textarea id="fname" style="width:500px;height:400px;"></textarea></p>
+
+            </div>
+        </div>
+        <div class="cRight">
+            <p><a href="https://github.com/zhangzhongbao/webcode.git">https://github.com/zhangzhongbao/webcode.git</a></p>
+            <p>Hadoop+Spark+MongoDB+MySQL+C#</p>
+            <p>mongodb配置主从模式 https://www.cnblogs.com/yujon/p/6128761.html</p>
+            <p>WPF实现阴影效果 https://www.tuicool.com/articles/ym6Jnm3</p>
+            <p>Redis并发锁 http://www.cnblogs.com/tdws/p/5712835.html</p>
+            <p>sbt scala下载地址 https://www.scala-sbt.org/download.html</p>
+            <p>https://www.cnblogs.com/hanyinglong/p/6539344.html</p>
+            <p>https://www.jexus.org/</p>
+            <p>http://www.cnblogs.com/hanyinglong/p/5456757.html</p>
+            <p>翻墙 http://www.safasti.net/  </p>
+        </div>
+    </div>
+</body>
+</html>

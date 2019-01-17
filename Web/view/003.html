@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+   <div>配置ubuntu FTP服务</div>
+    <span>
+        1、安装vsftpd软件
+        sudo apt-get install vsftpd
+        2、修改配置文件vsftpd.conf
+        输入以上命令将打开vsftpd.conf文件，进行以下修改
+
+        #local_enable=YES
+        #write_enable=YES
+
+        去掉上面两行前的#号。
+        3、修改完毕后保存退出，执行重启命令。
+        sudo /etc/init.d/vsftpd start  
+    </span>
+    <span>
+        su root
+        cd /usr/share/lightdm/lightdm.conf.d/
+        gedit 50-unity-greeter.conf &
+        添加
+        user-session=ubuntu
+        greeter-show-manual-login=true
+        all-guest=false
+        保存退出:wq
+        重启系统
+        读取/root/.profile时发现错误
+        进入系统，使用vi /root/.profile命令修改文件，
+        找到mesg n，修改为：tty -s && mesg n
+    </span>
+</body>
+</html>
