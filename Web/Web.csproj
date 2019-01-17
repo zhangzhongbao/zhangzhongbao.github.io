@@ -70,6 +70,9 @@
     <Content Include="json\Data.json" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="trw\configurations\twitterCompany.json" />
+    <Content Include="trw\resources\twitterCompanyData\TwitterTeam.gml" />
+    <Content Include="trw\resources\twitterCompanyData\twitterTeam3.csv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -82,6 +85,27 @@
     <Content Include="image\hd.png" />
     <Content Include="index.html" />
     <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="trw\classes\all.min.js" />
+    <Content Include="trw\classes\DataLoad.js" />
+    <Content Include="trw\classes\Drawing.js" />
+    <Content Include="trw\classes\Interaction.js" />
+    <Content Include="trw\classes\interface\Dialogue.js" />
+    <Content Include="trw\classes\interface\Header.js" />
+    <Content Include="trw\classes\interface\InteractionGuide.js" />
+    <Content Include="trw\classes\interface\Layout.js" />
+    <Content Include="trw\classes\interface\NetworkInfo.js" />
+    <Content Include="trw\classes\interface\Panel.js" />
+    <Content Include="trw\classes\interface\SpeedScroll.js" />
+    <Content Include="trw\classes\interface\TimeWidget.js" />
+    <Content Include="trw\classes\interface\ToolTip.js" />
+    <Content Include="trw\classes\interface\Window.js" />
+    <Content Include="trw\classes\Process.js" />
+    <Content Include="trw\classes\Space.js" />
+    <Content Include="trw\ga.js" />
+    <Content Include="trw\index.html" />
+    <Content Include="trw\Main.js" />
+    <Content Include="trw\resources\twitterCompanyData\clustersTwitter.txt" />
+    <Content Include="trw\resources\twitterCompanyData\twitterTweets.txt" />
     <Content Include="view\001.html" />
     <Content Include="view\002.html" />
     <Content Include="view\003.html" />
