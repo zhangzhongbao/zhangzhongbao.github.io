@@ -61,7 +61,7 @@ var PRINT_SIMPLE_GML = false;//this shouldn't be here, simple GML should be prod
 init=function(){
 	cycleOnMouseMovement(true);
 	END_CYCLE_DELAY = 6000;
-	
+    alert("aaaa");
 	if(hashTag!=null && hashTag!=""){
 		configurationUrl = './configurations/'+decodeURI(hashTag.substr(1));
 	} else {
