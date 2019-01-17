@@ -71,6 +71,11 @@
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="trw\configurations\twitterCompany.json" />
+    <Content Include="trw\resources\twitterCompanyData\thumbnails_images\8ZVGAY-d_400x400.jpg" />
+    <Content Include="trw\resources\twitterCompanyData\thumbnails_images\kpunIYN5_400x400.jpg" />
+    <Content Include="trw\resources\twitterCompanyData\thumbnails_images\mkpdB9Tf_400x400.jpg" />
+    <Content Include="trw\resources\twitterCompanyData\thumbnails_images\ugfxjY2J_400x400.jpg" />
+    <Content Include="trw\resources\twitterCompanyData\thumbnails_images\zRim1x6M_bigger.jpg" />
     <Content Include="trw\resources\twitterCompanyData\TwitterTeam.gml" />
     <Content Include="trw\resources\twitterCompanyData\twitterTeam3.csv" />
     <None Include="Web.Debug.config">
