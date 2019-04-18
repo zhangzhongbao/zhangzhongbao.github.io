@@ -1,19 +1,35 @@
-﻿<!DOCTYPE html>
-<html style="padding: 0;
-            margin: 0;">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+<html >
 <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <title>个人网站</title>
     <style type="text/css">
-        body {
+        * {
             margin: 0;
             padding: 0;
         }
 
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            overflow: hidden;
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+        }
+
         .Header {
             height: 100px;
-            background: #000;
+            background: #2c516c;
             color: white;
+            margin: 0;
+            padding: 0;
         }
 
         .Left {
@@ -97,7 +113,7 @@
                 //alert(obj.employees[0].firstName);
                 $.each(obj.employees, function (infoIndex, info) {
                     //$("#fname").append(JSON.stringify(info));
-                    $("#fname").append(info.firstName + ":" + info.lastName+"</br>");
+                    $("#fname").append(info.firstName + ":" + info.lastName + "</br>");
                 })
                 //alert(txt);
                 //$("#fname").text(txt);
@@ -137,7 +153,8 @@
 
     </script>
 </head>
-<body>
+<body style=" margin: 0;
+            padding: 0;">
     <div class="Header">
         <div class="Left"></div>
         <div class="Center"><p style="">张忠豹个人网站</p></div>
